@@ -5,36 +5,36 @@ import './App.css';
 import './style.css'
 
 
-const ACTIONS = {
-  ADD_DIGIT: 'add-digit',
-  CHOOSE_OPERATION:'choose-operation',
-  EVALUATE:'evaluate',
-  CLEAR:'clear',
-  DELET_DIGIT:'delete-digit',
-}
+// const ACTIONS = {
+//   ADD_DIGIT: 'add-digit',
+//   CHOOSE_OPERATION:'choose-operation',
+//   EVALUATE:'evaluate',
+//   CLEAR:'clear',
+//   DELET_DIGIT:'delete-digit',
+// }
 
-const reducer = (state,{type,payload})=>{
-   switch(type){
-    case ACTIONS.ADD_DIGIT:
-      {
-        return {
-          ...state,
-          currentOperand: `${currentOperand}${payload.digit}`
-        }
-      }
-   }
-}
+// const reducer = (state,{type,payload})=>{
+//    switch(type){
+//     case ACTIONS.ADD_DIGIT:
+//       {
+//         return {
+//           ...state,
+//           currentOperand: `${currentOperand}${payload.digit}`
+//         }
+//       }
+//    }
+// }
 
 function App() {
 
- const[{currentOperand ,previousOperand,operation},dispatch] = useReducer(reducer)
+//  const[{currentOperand ,previousOperand,operation},dispatch] = useReducer(reducer)
 
-dispatch({type : ACTIONS.ADD_DIGIT,payload:{digit: 1}})
+// dispatch({type : ACTIONS.ADD_DIGIT,payload:{digit: 1}})
   return (
     <div className="calculator-grid">
       <div className='output'>
-         <div classsName="previos-operand">{previousOperand} {operation}</div>
-         <div className="current-operand">{currentOperand}</div>
+         <div classsName="previos-operand"></div>
+         <div className="current-operand"></div>
       </div>
       <button className='span-two'>AC</button>
       <button >DEL</button>
